@@ -3,6 +3,8 @@ package com.codex.medipast;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,8 +15,20 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.codex.medipast.fragments.AboutFragment;
+import com.codex.medipast.fragments.AddDoctorFragment;
+import com.codex.medipast.fragments.AddMedicalHistoryFragment;
+import com.codex.medipast.fragments.HomeFragment;
+import com.codex.medipast.fragments.MedicalHistoryFragment;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+
+    FragmentManager fm;
+    FragmentTransaction ft;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +54,8 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
     }
 
     @Override
@@ -80,17 +96,42 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_home) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+            fm = getSupportFragmentManager();
+            ft = fm.beginTransaction();
+            HomeFragment homeFragment = new HomeFragment();
+            ft.replace(R.id.container_layout, homeFragment);
+            ft.commit();
 
-        } else if (id == R.id.nav_slideshow) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_add_doctor) {
+            fm = getSupportFragmentManager();
+            ft = fm.beginTransaction();
+            AddDoctorFragment addDoctorFragment = new AddDoctorFragment();
+            ft.replace(R.id.container_layout, addDoctorFragment);
+            ft.commit();
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_medical_history) {
+            fm = getSupportFragmentManager();
+            ft = fm.beginTransaction();
+            MedicalHistoryFragment medicalHistoryFragment = new MedicalHistoryFragment();
+            ft.replace(R.id.container_layout, medicalHistoryFragment);
+            ft.commit();
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_add_medical) {
+            fm = getSupportFragmentManager();
+            ft = fm.beginTransaction();
+            AddMedicalHistoryFragment addMedicalHistoryFragment = new AddMedicalHistoryFragment();
+            ft.replace(R.id.container_layout, addMedicalHistoryFragment);
+            ft.commit();
+
+        } else if (id == R.id.nav_about) {
+            fm = getSupportFragmentManager();
+            ft = fm.beginTransaction();
+            AboutFragment aboutFragment = new AboutFragment();
+            ft.replace(R.id.container_layout, aboutFragment);
+            ft.commit();
 
         }
 

@@ -1,14 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.AddMedicalHistoryFragment">
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="4dp">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Add Medical History"
+        android:paddingLeft="60sp"
+        android:paddingTop="15dp"
+        android:paddingBottom="20sp"
+        android:textStyle="italic"
+        android:textSize="30sp" />
 
-</FrameLayout>
+    <ImageView
+        android:layout_width="175sp"
+        android:layout_height="150sp"
+        android:layout_gravity="center"
+        android:id="@+id/prescription_image_view" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Take Prescription"
+        android:textAllCaps="false"
+        android:id="@+id/takePrescriptionButton" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Doctor Name"
+        android:paddingLeft="140sp"
+        android:id="@+id/medicalDoctorNameET" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Details"
+        android:paddingLeft="160sp"
+        android:id="@+id/medicalDetailsET" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Select  Date"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/medicalDateET" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20sp"
+        android:text="Add medical history"
+        android:textAllCaps="false"
+        android:id="@+id/medicalAddHistoryButton" />
+
+
+</LinearLayout>

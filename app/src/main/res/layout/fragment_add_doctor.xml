@@ -1,14 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.AddDoctorFragment">
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginRight="8dp">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Add Doctor Info"
+        android:paddingLeft="70sp"
+        android:paddingTop="15dp"
+        android:paddingBottom="20sp"
+        android:textStyle="italic"
+        android:textSize="30sp" />
 
-</FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Name :"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Please enter doctor name"
+            android:layout_weight="2"
+            android:id="@+id/doctorNameET" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Details :"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Please add doctor's "
+            android:id="@+id/doctorDetailsET"
+            android:layout_weight="2"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Appointment:"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/appointmentET"
+            android:hint=" Select Date"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Phone :"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Please add doctor's phone No"
+            android:id="@+id/doctorPhoneET"
+            android:layout_weight="2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Email :"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Please add doctor's Email"
+            android:id="@+id/doctorEmailET"
+            android:layout_weight="2" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40sp"
+        android:layout_gravity="center"
+        android:textAllCaps="false"
+        android:text="Add Doctor Info"
+        android:id="@+id/addDoctorInfoButton"
+
+        />
+
+</LinearLayout>

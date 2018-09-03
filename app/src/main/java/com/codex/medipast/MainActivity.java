@@ -55,6 +55,12 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        fm = getSupportFragmentManager();
+        ft = fm.beginTransaction();
+        HomeFragment homeFragment = new HomeFragment();
+        ft.add(R.id.container_layout, homeFragment);
+        ft.commit();
+
 
     }
 

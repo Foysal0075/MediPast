@@ -6,19 +6,19 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+
             android:title="Home" />
         <item
             android:id="@+id/nav_add_doctor"
-            android:icon="@drawable/ic_menu_gallery"
+
             android:title="Add Doctor" />
         <item
             android:id="@+id/nav_medical_history"
-            android:icon="@drawable/ic_menu_slideshow"
+
             android:title="Medical History" />
         <item
             android:id="@+id/nav_add_medical"
-            android:icon="@drawable/ic_menu_manage"
+
             android:title="Add Medical History" />
     </group>
 
@@ -26,7 +26,7 @@
         <menu>
             <item
                 android:id="@+id/nav_about"
-                android:icon="@drawable/ic_menu_share"
+
                 android:title="About" />
         </menu>
     </item>

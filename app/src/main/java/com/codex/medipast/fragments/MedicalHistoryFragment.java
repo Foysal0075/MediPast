@@ -6,7 +6,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
+import com.codex.medipast.DbManager;
+import com.codex.medipast.HistoryListViewAdapter;
 import com.codex.medipast.R;
 
 /**
@@ -14,6 +17,8 @@ import com.codex.medipast.R;
  */
 public class MedicalHistoryFragment extends Fragment {
 
+    ListView listView;
+    DbManager dbManager;
 
     public MedicalHistoryFragment() {
         // Required empty public constructor
@@ -24,7 +29,14 @@ public class MedicalHistoryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_medical_history, container, false);
+        View view= inflater.inflate(R.layout.fragment_medical_history, container, false);
+
+
+        dbManager = new DbManager(getContext());
+        listView = view.findViewById(R.id.history_list);
+        HistoryListViewAdapter historyListViewAdapter = new HistoryListViewAdapter(getContext(),dbManager.getAllhistories());
+        listView.setAdapter(historyListViewAdapter);
+        return view;
     }
 
 }
